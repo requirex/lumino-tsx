@@ -1,0 +1,34 @@
+{
+  "name": "lumino-tsx",
+  "version": "0.1.0",
+  "description": "Wrapper for creating Lumino-based user interfaces using TSX",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "browser": "dist/umd/index.js",
+  "typings": "dist/esm/index.d.ts",
+  "scripts": {
+    "build:umd": "tsc -p src -m es6 --outdir dist/esm && rollup -c",
+    "prepare": "tsc -p src && (checkver lt 5.0.0 || npm run build:umd)"
+  },
+  "author": "Juha Järvi",
+  "license": "CC0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/requirex/lumino-tsx.git"
+  },
+  "bugs": {
+    "url": "https://github.com/requirex/lumino-tsx/issues"
+  },
+  "homepage": "https://github.com/requirex/lumino-tsx#readme",
+  "devDependencies": {
+    "@types/node": "^14.0.5",
+    "autoroll": "^0.2.0",
+    "rollup": "^2.10.8",
+    "typescript": "^3.9.3"
+  },
+  "dependencies": {
+    "@lumino/widgets": "^1.12.2",
+    "requirex": "^0.3.2",
+    "tslib": "^2.0.0"
+  }
+}
